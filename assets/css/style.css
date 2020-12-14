@@ -6,12 +6,12 @@ body {
 }
 
 /* start of styling header */
+
 header {
     background-image: url("../images/mountains-with-cactus-banner-exp.png");
     background-size: cover; 
-    height: 300px;
     background-attachment: fixed;
-    background-position: 80%; 
+    background-position: 100%; 
     padding: 20px 35px;
     display: flex;
     justify-content: space-between;
@@ -64,17 +64,110 @@ header nav ul li a:hover {
 
 /* start of styling hero section */
 .hero {
-    background-image: url("../images/mountains-with-cactus-banner-exp.jpg");
+    background-image: url("../images/mountains-with-cactus-banner-exp.png");
     background-size: cover; 
     background-attachment: fixed;
-    height: 300px;
-    background-position: 80%;
+    background-position: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    height: 300px;
 }
 
-/* .hero h2 { */
-    /* align-items: flex-end; */
-/* } */
+.hero-text h2 {
+    justify-content: flex-end;
+    font-style: italic;
+}
+/* end of styling hero section */
+
+.section-title {
+    color: rgb(82, 79, 79);
+    text-align: left;
+}
+
+/* start of about-me styling */
+.about-me-content {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.about-me-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.5%;
+}
+
+.about-me-text {
+    flex: 2 60%;
+    align-items: center;
+}
+
+.about-me-image {
+    flex: 1 40%;
+    align-items: center;
+}
+.about-me-image img {
+    max-height: 300px;
+    max-width: 200px;
+    margin-left: 2.5%;
+    border-radius: 50%;
+}
+/*
+.about-me.text {
+    flex: 1 60%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-me-image {
+    flex: 2 40%;
+    margin: 3.5%;
+    max-height: 300px;
+    max-width: 200px;
+    align-items: center;
+}
+*/
+/* start of styling say-hello section */
+.say-hello-form {
+    display: block;
+    background-color: rgba(82,79,79,0.25);
+}
+
+
+.say-hello-form h2 {
+    color: rgb(82,79,79);
+    text-align: left;
+}
+
+.say-hello-form form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.say-hello-fi {
+    border: 1px solid rgb(0,0,0);
+    border-radius: 15px;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: rgb(82,79,79);
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: rrgba(82,79,79,0.25);
+}
+
+.say-hello-fi:focus {
+    background-color: rgb(0,0,0);
+    outline: none;
+}
+
+.say-hello-form label {
+    margin: 0 5px;
+}
