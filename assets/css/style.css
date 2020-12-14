@@ -26,7 +26,8 @@ header {
 
 header h1 {
     font-weight: bold;
-    font-size: 36px;
+    /* font-size: 36px; */
+    font-size: 3rem;
     margin: 0 0 0 15px;
 }
 
@@ -81,27 +82,34 @@ header nav ul li a:hover {
 }
 /* end of styling hero section */
 
-.section-title {
+.section-title h2 {
     color: rgb(82, 79, 79);
     text-align: left;
+    font-size: 2rem;
+}
+
+.section-title {
+    width: 80%;
+}
+
+.section-title h2 {
+    color: rgb(82, 79, 79);
+    text-align: left;
+    font-size: 2rem;
 }
 
 /* start of about-me styling */
 .about-me-content {
+    padding: 2.5%;
+}
+
+.about-me-info {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-}
-
-.about-me-info {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 2.5%;
 }
 
 .about-me-text {
@@ -119,31 +127,149 @@ header nav ul li a:hover {
     margin-left: 2.5%;
     border-radius: 50%;
 }
-/*
-.about-me.text {
-    flex: 1 60%;
-    flex-wrap: wrap;
-    align-items: center;
+/* end of styling about-me section */
+
+/* start of styling skills section */
+.skills-section {
+    width: 100%;
+    background-color: rgba(82,79,79,0.25);
+    padding: 2.5%;
+}
+.skills-grid-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
-.about-me-image {
-    flex: 2 40%;
-    margin: 3.5%;
-    max-height: 300px;
-    max-width: 200px;
-    align-items: center;
+.skills-grid-wrapper {
+    /* background: rgba(82,79,79,0.25); */
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border: none;
+    color: rgb(0,0,0);
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-family: Courier-New, Arial, sans-serif;
+    font-style: italic;
+}
+
+.skills-grid-item {
+   padding: 0 15px 0 15px;
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.skills-grid-item.front {
+    grid-column: 1;
+}
+
+.skills-grid-item.back {
+    grid-column: 2;
+}
+
+.skills-grid-head {
+    font-weight: bold;
+    font-style: normal;
+    padding-bottom: .5rem;
+}
+/* end of styling skills section */
+
+/* start of work section */
+.work {
+    padding: 2.5%;
+    width: 100%;
+}
+
+.work-grid-wrapper {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: none;
+    justify-content: center;
+    margin: 0 auto;
+    grid-gap: 15px;
+}
+
+
+.work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.work-grid-item.large-pic {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.work-grid-item.small-pic-1 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.work-grid-item.small-pic-2 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.work-grid-item.small-pic-3 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.work-grid-item.small-pic-4 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+
+/*
+.large-pic {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.small-pic-1 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.small-pic-2 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.small-pic-3 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    grid-row-end: 3;
+}
+
+.small-pic-4 {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
 }
 */
+/* end of work section */
+
 /* start of styling say-hello section */
 .say-hello-form {
     display: block;
     background-color: rgba(82,79,79,0.25);
+    padding: 2.5%;
 }
 
-
 .say-hello-form h2 {
-    color: rgb(82,79,79);
+    color: rgb(82, 79, 79);
     text-align: left;
+    font-size: 2rem;
 }
 
 .say-hello-form form {
@@ -160,14 +286,24 @@ header nav ul li a:hover {
     color: rgb(82,79,79);
     width: 100%;
     margin-bottom: 15px;
-    background-color: rrgba(82,79,79,0.25);
+    background-color: rgba(82,79,79,0);
 }
 
 .say-hello-fi:focus {
-    background-color: rgb(0,0,0);
+    background-color: rgb(255,255,255);
     outline: none;
 }
 
 .say-hello-form label {
-    margin: 0 5px;
+    margin: 0 10px;
 }
+
+.say-hello-form button {
+    background-color: rgb(199, 151, 61);
+    color: rgb(0,0,0);
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+/* end of styling say-hello */
