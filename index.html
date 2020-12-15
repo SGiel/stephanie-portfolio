@@ -35,11 +35,7 @@
 
     <!-- hero/jumbotron section -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h2>I love to code!</h2>
-          </div>
-        </div>
+        <h2>I love to code!</h2>
     </section>
 
     <!-- start of about-me -->
@@ -67,49 +63,27 @@
         <div class="section-title">
             <h2>Skills</h2> 
         </div>
-        <div class="skills-grid-wrapper">
-            <!-- Headers -->
-            <div class="skills-grid-item skills-grid-head front-end">
-                Front-End Developer
+        <div class="skills-wrapper">
+            <div class="front-end-col">
+                <h3>Front-End Developer</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Git & GitHub</li>
+                </ul>
             </div>
-            <div class="skills-grid-item skills-grid-head back-end">
-                Back-End Developer
-            </div>
-
-            <!-- Body -->
-            <div class="skills-grid-item front-end">
-                HTML
-            </div>
-
-            <div class="skills-grid-item back-end">
-                   Skill 1
-            </div>
-
-            <div class="skills-grid-item front-end">
-                CSS
-            </div>
-
-            <div class="skills-grid-item back-end">
-                Skill 2
-            </div>
-
-            <div class="skills-grid-item front-end">
-                JavaScript
-               </div>
-
-            <div class="skills-grid-item back-end">
-                Skill 3
-            </div>
-
-            <div class="skills-grid-item front-end">
-                Git & GitHub
-            </div>
-
-            <div class="skills-grid-item back-end">
-                Skill 4
+            <div class="back-end-col">
+                <h3>Back-End Developer</h3>
+                <ul>
+                    <li>Skill Set 1</li>
+                    <li>Skill Set 2</li>
+                    <li>Skill Set 3</li>
+                    <li>Skill Set 4</li>
+                </ul>
             </div>
         </div>
-        <!-- end of skills-grid-wrap -->
+        <!-- end of skills wrapper -->
     </section>
     <!-- end of skills section -->
 
@@ -120,31 +94,38 @@
         </div> 
         <div class="work-grid-wrapper">
 
-            <div class="work-grid-item large-pic">
-                <img src="./assets/images/Run-buddy-screenshot.png" alt="Run Buddy landing page"
-                    class="work-image"/>
+            <div class="large-pic" onclick='location.href = "https://sgiel.github.io/run-buddy/";'>
+                <div class="work-image-1">
+                    <h3>Run Buddy</h3>
+                    <p>HTLM/CSS</p>
+                </div>
             </div>
 
-            <div class="work-grid-item small-pic-1">
-                <img src="./assets/images/sergey-shmidt-koy6FlCCy5s-unsplash.jpg" alt="yellow flowers under a blue sky"
-                    class="work-image"/>
+            <div class="small-pic-1">
+                <div class="work-image-2">
+                    <h3>Grow Report</h3>
+                    <p>Skill Set 2</p>
+                </div>
             </div>
 
-            <div class="work-grid-item small-pic-2">
-                <img src="./assets/images/mikail-mcverry-Aw45CDU2evI-unsplash.jpg" alt="front of kayak on the water in the mist"
-                class="work-image"/>
+            <div class="small-pic-2">
+                <div class="work-image-3">
+                    <h3>Kayak Escapes</h3>
+                    <p>Skill Set 3</p>
+                </div>
             </div>
-
-            <div class="work-grid-item small-pic-3">
-                <img src="./assets/images/henry-becerra-0ZVbngTr7X4-unsplash.jpg" alt="outside red brick apartment building"
-                class="work-image"/>
+            <div class="small-pic-3">
+                <div class="work-image-4">
+                    <h3>NIMBY No!</h3>
+                    <p>Skill Set 4</p>
+                </div>
             </div>
-
-            <div class="work-grid-item small-pic-4">
-                <img src="./assets/images/laura-lugaresi-E27W6TyGmZM-unsplash.jpg" alt="grey and white kitten outside"
-                class="work-image"/>
+            <div class="small-pic-4">
+                <div class="work-image-5">
+                    <h3>How Cute is This?</h3>
+                    <p>Skill Set 5</p>
+                </div>
             </div>
-
         </div>
         <!-- end of work-grid-wrap -->
 
@@ -152,20 +133,23 @@
     <!-- end of my-work -->
 
     <!-- start of say-hello -->
-    <section class="say-hello-form" id="say-hello">
-        <h2>Say Hello</h2>
-        
-        <form>
-            <label for="email">Email</label>
-            <input type="email" placeholder="email address" name="email" id="email" 
-                class="say-hello-fi" />
+    <section id="say-hello">
+        <div class="say-hello-form">
+            <div class="section-title">
+                <h2>Say Hello</h2>
+             </div>
+            <form>
+                <label for="email">Email</label>
+                <input type="email" placeholder="email address" name="email" id="email" 
+                    class="say-hello-fi" />
+                
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" placeholder="message" class="say-hello-fi"></textarea>
             
-            <label for="contact-message">Message</label>
-            <textarea id="contact-message" placeholder="message" class="say-hello-fi"></textarea>
-        
-            <button type="submit">Submit</button>
+                <button type="submit">Submit</button>
 
-        </form>
+            </form>
+    </div>
     </section>
     <!-- end of say-hello -->
 

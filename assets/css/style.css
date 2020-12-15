@@ -1,8 +1,12 @@
-/* The fonts are used by browsers in order of appearance. If browser doesn't use
-    Helvetic it then uses Arial, etc... */
+* {
+    box-sizing: inherit;
+}
 body {
     color: rgb(0,0,0);
     font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    /* width: 100%; */
 }
 
 /* start of styling header */
@@ -50,8 +54,8 @@ header nav ul {
 }
 
 header nav ul li a {
-    padding: 10px 15px;
-    font-size: 1.55vw;
+    padding: 10px 30px 10px 0;
+    font-size: 1.5rem;
     color: rgb(0,0,0);
     text-decoration: none;
     opacity: 1;
@@ -74,22 +78,25 @@ header nav ul li a:hover {
     flex-wrap: wrap;
     align-items: flex-start;
     height: 300px;
+    /* for text in bottom-right corner */
+    font-style: italic;
+    justify-content: flex-end;
+    align-content: flex-end;
 }
 
-.hero-text h2 {
-    justify-content: flex-end;
-    font-style: italic;
+.hero h2 {
+    padding: 50px;
 }
 /* end of styling hero section */
+
+.section-title {
+    padding-left: 50px;
+}
 
 .section-title h2 {
     color: rgb(82, 79, 79);
     text-align: left;
     font-size: 2rem;
-}
-
-.section-title {
-    width: 80%;
 }
 
 .section-title h2 {
@@ -134,49 +141,33 @@ header nav ul li a:hover {
     width: 100%;
     background-color: rgba(82,79,79,0.25);
     padding: 2.5%;
+    font-size: 1.2rem;
+    font-family: Courier-New, Arial, sans-serif;
 }
+
+.skills-wrapper {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.front-end-col, .back-end-col {
+    width: 35%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.front-end-col ul li , .back-end-col ul li {
+    list-style: none;
+    font-style: italic;
+}
+
 .skills-grid-wrapper {
     display: flex;
     width: 100%;
     justify-content: center;
-}
-
-.skills-grid-wrapper {
-    /* background: rgba(82,79,79,0.25); */
-    width: 40%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    border: none;
-    color: rgb(0,0,0);
-    justify-content: center;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    font-family: Courier-New, Arial, sans-serif;
-    font-style: italic;
-}
-
-.skills-grid-item {
-   padding: 0 15px 0 15px;
-   border: none;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-}
-
-.skills-grid-item.front {
-    grid-column: 1;
-}
-
-.skills-grid-item.back {
-    grid-column: 2;
-}
-
-.skills-grid-head {
-    font-weight: bold;
-    font-style: normal;
-    padding-bottom: .5rem;
 }
 /* end of styling skills section */
 
@@ -190,73 +181,79 @@ header nav ul li a:hover {
     width: 60%;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: minmax(auto, 200px) minmax(auto, 200px);
     border: none;
     justify-content: center;
     margin: 0 auto;
     grid-gap: 15px;
+    
 }
 
+/* .work-grid-item { */
+    /* cursor: pointer; */
+/* } */
 
-.work-image {
+.work-image-1, .work-image-2, .work-image-3, .work-image-4, .work-image-5 {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
+    display: flex;
+    background-size: cover;
+    flex-flow: column;
+    /* justify-content: center; */
+    /* flex-flow: column; */
+    /*align-items: flex-end; */
+    padding: 10px;
+    
 }
 
-.work-grid-item.large-pic {
+.work-image-1 {
+    background-image: url("../images/Run-buddy-screenshot.png");
+}
+
+.work-image-2 {
+    background-image: url("../images/sergey-shmidt-koy6FlCCy5s-unsplash.jpg");
+}
+
+.work-image-3 {
+    background-image: url("../images/mikail-mcverry-Aw45CDU2evI-unsplash.jpg");
+}
+
+.work-image-4 {
+    background-position: center bottom;
+    background-image: url("../images/henry-becerra-0ZVbngTr7X4-unsplash.jpg");
+}
+
+.work-image-5 {
+    background-position: center;
+    background-image: url("../images/Laura-lugaresi-E27W6TyGmZM-unsplash.jpg");
+}
+
+.large-pic {
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
-}
-
-.work-grid-item.small-pic-1 {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.work-grid-item.small-pic-2 {
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.work-grid-item.small-pic-3 {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-}
-
-.work-grid-item.small-pic-4 {
-    grid-column: 3 / span 1;
-    grid-row: 2 / span 1;
-}
-
-/*
-.large-pic {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
+    display: grid;
 }
 
 .small-pic-1 {
-    grid-column: 3 / span 1;
+    grid-column: 2 / span 1;
     grid-row: 1 / span 1;
 }
 
 .small-pic-2 {
-    grid-column: 4 / span 1;
+    grid-column: 3 / span 1;
     grid-row: 1 / span 1;
 }
 
 .small-pic-3 {
-    grid-column: 3 / span 1;
+    grid-column: 2 / span 1;
     grid-row: 2 / span 1;
-    grid-row-end: 3;
 }
 
 .small-pic-4 {
-    grid-column: 4 / span 1;
+    grid-column: 3 / span 1;
     grid-row: 2 / span 1;
 }
-*/
+
 /* end of work section */
 
 /* start of styling say-hello section */
@@ -264,14 +261,15 @@ header nav ul li a:hover {
     display: block;
     background-color: rgba(82,79,79,0.25);
     padding: 2.5%;
+    width: 100%;
 }
-
+/*
 .say-hello-form h2 {
     color: rgb(82, 79, 79);
     text-align: left;
     font-size: 2rem;
 }
-
+*/
 .say-hello-form form {
     width: 40%;
     margin: 0 auto;
@@ -307,3 +305,27 @@ header nav ul li a:hover {
     padding: 10px 20px;
 }
 /* end of styling say-hello */
+
+@media screen and (max-width:1064px) {
+    header h1, header nav {
+        margin: 0 auto;
+    }
+    
+}
+
+@media screen and (max-width:600px) {
+    
+    header h1, header nav {
+        font-size: 2rem;
+    }
+
+    header nav ul li {
+        font-size: 1.25rem;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-flow: column;
+    }
+    
+}
