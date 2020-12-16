@@ -17,6 +17,7 @@ header {
     background-attachment: fixed;
     background-position: 100%; 
     padding: 20px 35px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -56,7 +57,8 @@ header nav ul {
 header nav ul li a {
     padding: 10px 30px 10px 0;
     font-size: 1.5rem;
-    color: rgb(0,0,0);
+    /* color: rgb(0,0,0); */
+    color: rgb( 199, 151, 61);
     text-decoration: none;
     opacity: 1;
 }
@@ -76,7 +78,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     height: 300px;
     /* for text in bottom-right corner */
     font-style: italic;
@@ -106,33 +108,40 @@ header nav ul li a:hover {
 }
 
 /* start of about-me styling */
-.about-me-content {
-    padding: 2.5%;
+.about-me-content { 
+    padding: 2.5%; 
+    width: 100%;
 }
 
 .about-me-info {
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
+    padding: 2.5%;
 }
 
 .about-me-text {
-    flex: 2 60%;
+    flex: 1 60%;
     align-items: center;
 }
 
 .about-me-image {
-    flex: 1 40%;
-    align-items: center;
+    flex: 2 40%;
+    text-align: center;
 }
 .about-me-image img {
     max-height: 300px;
     max-width: 200px;
-    margin-left: 2.5%;
     border-radius: 50%;
+}
+
+.small-border {
+    width: 20%;
+    margin: 0 auto;
+    border-bottom: 3px solid rgb( 199, 151, 61);
 }
 /* end of styling about-me section */
 
@@ -176,34 +185,26 @@ header nav ul li a:hover {
     padding: 2.5%;
     width: 100%;
 }
-
+/* 2 x 3 grid with first of 5 images taking up two rows and first column 
+    twice as wide as next 2 columns */
 .work-grid-wrapper {
     width: 60%;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: minmax(auto, 200px) minmax(auto, 200px);
+    height: 400px;
+    grid-template-columns: 2fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
     border: none;
     justify-content: center;
     margin: 0 auto;
     grid-gap: 15px;
-    
 }
 
-/* .work-grid-item { */
-    /* cursor: pointer; */
-/* } */
-
+/* 5 different background images for each of 5 grid items */
 .work-image-1, .work-image-2, .work-image-3, .work-image-4, .work-image-5 {
     width: 100%;
     height: 100%;
-    display: flex;
     background-size: cover;
-    flex-flow: column;
-    /* justify-content: center; */
-    /* flex-flow: column; */
-    /*align-items: flex-end; */
-    padding: 10px;
-    
+    padding: 10px; 
 }
 
 .work-image-1 {
@@ -228,32 +229,63 @@ header nav ul li a:hover {
     background-image: url("../images/Laura-lugaresi-E27W6TyGmZM-unsplash.jpg");
 }
 
-.large-pic {
+/* declares positioning in grid */
+.work-grid-1 {
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
-    display: grid;
 }
 
-.small-pic-1 {
+.work-grid-2 {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
 }
 
-.small-pic-2 {
+.work-grid-3 {
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
 }
 
-.small-pic-3 {
+.work-grid-4 {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
 }
 
-.small-pic-4 {
+.work-grid-5 {
     grid-column: 3 / span 1;
     grid-row: 2 / span 1;
 }
 
+.work-grid-item {
+    display: block;
+    width: 100%;
+}
+
+/* text in grid item has box and background */
+.work-text-large {
+    border: 2px solid rgba(82,79,79,0.50);
+    background-color: rgba(82,79,79,0.50);
+    margin: 2.5% 0 0 2.5%;
+    text-align: center;
+    padding-bottom: 2.5%;
+    height: 80px;
+    width: 130px;
+}
+
+.work-text {
+    border: 2px solid rgba(82,79,79,0.50);
+    background-color: rgba(82,79,79,0.50);
+    margin: 60% 0 2.5% 0%;
+    text-align: center;
+    padding-bottom: 2.5%;
+    height: 80px;
+    width: 130px;
+    font-size: .9rem;
+}
+
+.work-text-large p, .work-text p {
+    margin-top: 0;
+    margin-bottom: 2.5%;
+}
 /* end of work section */
 
 /* start of styling say-hello section */
@@ -263,13 +295,7 @@ header nav ul li a:hover {
     padding: 2.5%;
     width: 100%;
 }
-/*
-.say-hello-form h2 {
-    color: rgb(82, 79, 79);
-    text-align: left;
-    font-size: 2rem;
-}
-*/
+
 .say-hello-form form {
     width: 40%;
     margin: 0 auto;
@@ -306,6 +332,23 @@ header nav ul li a:hover {
 }
 /* end of styling say-hello */
 
+/* start of styling footer */
+footer {
+    width: 100%;
+}
+footer h3 {
+    background-color:
+    rgb(199, 151, 61);
+    height: 40px;
+    text-align: right;
+    padding: 10px;
+}
+
+footer span {
+    color: red;
+}
+/* end of styling footer */
+
 @media screen and (max-width:1064px) {
     header h1, header nav {
         margin: 0 auto;
@@ -315,17 +358,36 @@ header nav ul li a:hover {
 
 @media screen and (max-width:600px) {
     
+    header {
+        justify-content: center;
+        padding: 0;
+    }
+
     header h1, header nav {
         font-size: 2rem;
     }
 
-    header nav ul li {
+    header nav ul li a {
         font-size: 1.25rem;
+        color: black;
     }
 
-    header nav ul {
-        display: flex;
-        flex-flow: column;
+    header nav ul { 
+        display: flex; 
+        flex-flow: column; 
+    } 
+
+    header h1 {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    header nav {
+        width: 60%;
+        margin: 0 auto;
     }
     
-}
+    /* .hero { */
+        /* justify-content: flex-end; */
+        /* align-content: center; */
+/* } */
