@@ -369,6 +369,14 @@ footer span {
         text-align: center;
     }
 
+    .front-end-col, .back-end-col {
+        width: 50%;
+    }
+
+    .say-hello-form form {
+        width: 60%;
+    }
+
 }
 /* end of stylings for media screen max-width of 900px */ 
 
@@ -394,6 +402,23 @@ footer span {
     .hero h2 {
         font-size: 1.25rem;
     }
+
+.skills-section {
+    font-size: 1rem;
+}
+
+.skills-wrapper {
+    width: 100%;
+}
+
+    .front-end-col h3, .back-end-col h3 {
+        font-size: 1.25rem;
+    }
+
+    .say-hello-form form {
+        width: 80%;
+    }
+
 }
 /* End of stylings for media screen max-width 600px */
     
@@ -416,10 +441,6 @@ footer span {
         font-size: 1.25rem;
     }
 
-    header nav ul li a {
-        color: black;
-    }
-
     header nav ul { 
         display: flex; 
         flex-flow: column; 
@@ -438,8 +459,6 @@ footer span {
     .section-title h2 {
         text-align: center;
     }
-
-
 
     .work-grid-wrapper {
     width: 80%;
@@ -498,6 +517,10 @@ footer span {
         margin-bottom: 2.5%;
     }
     /* end of work section */
+
+    .say-hello-form form {
+        width: 100%;
+    }
 
 }
 /* End of stylings for media screen maxwidth 480px */
