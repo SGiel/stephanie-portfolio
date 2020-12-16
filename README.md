@@ -13,4 +13,4 @@ This code contains skills I have recently learned including flexbox, CSS Grid La
 
 ## Link
 
-[link to Horiseon webpage](https://sgiel.github.io/stephanie-portfolio/)
+[link to Stephanie-Portfolio webpage](https://sgiel.github.io/stephanie-portfolio/)
