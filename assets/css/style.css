@@ -1,8 +1,20 @@
+:root {
+    --primary-color: rgb(0,0,0);
+    --secondary-color: rgb(82, 79, 79);
+    --tertiary-color: rgb( 199, 151, 61);
+}
+
+/* The fonts are used by browsers in order of appearance. If browser doesn't use
+    Helvetic it then uses Arial, etc... */
+body {
+    color: var(--tertiary-color);
+    font-family: Helvetica, Arial, sans-serif;
+}
 * {
     box-sizing: inherit;
 }
 body {
-    color: rgb(0,0,0);
+    color: var(--primary-color);
     font-family: Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     font-size: 16px;
@@ -38,7 +50,7 @@ header h1 {
 
 header h1 a {
     text-decoration: none;
-    color: rgb(0,0,0);
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -58,7 +70,7 @@ header nav ul li a {
     padding: 10px 30px 10px 0;
     font-size: 1.5rem;
     /* color: rgb(0,0,0); */
-    color: rgb( 199, 151, 61);
+    color: var(--tertiary-color);
     text-decoration: none;
     opacity: 1;
 }
@@ -66,7 +78,7 @@ header nav ul li a {
 header nav ul li a:hover {
     font-weight: normal;
     font-weight: bold;
-    color: rgb(82, 79, 79);
+    color: var(--secondary-color);
 }
 
 /* start of styling hero section */
@@ -96,13 +108,13 @@ header nav ul li a:hover {
 }
 
 .section-title h2 {
-    color: rgb(82, 79, 79);
+    color: var(--secondary-color);
     text-align: left;
     font-size: 2rem;
 }
 
 .section-title h2 {
-    color: rgb(82, 79, 79);
+    color: var(--secondary-color);
     text-align: left;
     font-size: 2rem;
 }
@@ -141,7 +153,7 @@ header nav ul li a:hover {
 .small-border {
     width: 20%;
     margin: 0 auto;
-    border-bottom: 3px solid rgb( 199, 151, 61);
+    border-bottom: 3px solid var(--tertiary-color);
 }
 /* end of styling about-me section */
 
@@ -308,15 +320,15 @@ header nav ul li a:hover {
 }
 
 .say-hello-fi {
-    border: 1px solid rgb(0,0,0);
+    border: 1px solid var(--primary-color);
     border-radius: 15px;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: rgb(82,79,79);
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
-    background-color: rgba(82,79,79,0);
+    background-color: var(--secondary-color);
 }
 
 .say-hello-fi:focus {
@@ -329,8 +341,8 @@ header nav ul li a:hover {
 }
 
 .say-hello-form button {
-    background-color: rgb(199, 151, 61);
-    color: rgb(0,0,0);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
     border: none;
     border-radius: 15px;
     font-size: 16px;
@@ -343,15 +355,14 @@ footer {
     width: 100%;
 }
 footer h3 {
-    background-color:
-    rgb(199, 151, 61);
+    background-color: var(--tertiary-color);
     height: 40px;
     text-align: right;
     padding: 10px;
 }
 
 footer span {
-    color: red;
+    color: tomato;
 }
 /* end of styling footer */
 
