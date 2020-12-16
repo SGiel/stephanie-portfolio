@@ -28,7 +28,7 @@ header {
     background-size: cover; 
     background-attachment: fixed;
     background-position: 100%; 
-    padding: 15px 35px;
+    padding: 0 35px;
     width: 100%;
     display: flex;
     justify-content: space-between;
