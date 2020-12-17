@@ -229,6 +229,12 @@ header nav ul li a:hover {
     background-image: url("../images/Run-buddy-screenshot.png");
 }
 
+.work-image-1:hover, .work-image-2:hover, .work-image-3:hover, .work-image-4:hover, .work-image-5:hover {
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
 .work-image-2 {
     background-image: url("../images/sergey-shmidt-koy6FlCCy5s-unsplash.jpg");
 }
@@ -328,14 +334,14 @@ header nav ul li a:hover {
     color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
-    background-color: var(--secondary-color);
+    background-color: white;
 }
-
+/*
 .say-hello-fi:focus {
     background-color: rgb(255,255,255);
     outline: none;
 }
-
+*/
 .say-hello-form label {
     margin: 0 10px;
 }
@@ -347,6 +353,11 @@ header nav ul li a:hover {
     border-radius: 15px;
     font-size: 16px;
     padding: 10px 20px;
+}
+
+.say-hello-form button:hover {
+    padding: 12px 24px;
+    font-size: 16px;
 }
 /* end of styling say-hello */
 
