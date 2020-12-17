@@ -336,12 +336,13 @@ header nav ul li a:hover {
     margin-bottom: 15px;
     background-color: white;
 }
-/*
+
 .say-hello-fi:focus {
     background-color: rgb(255,255,255);
     outline: none;
+    border: 3px solid var(--tertiary-color);
 }
-*/
+
 .say-hello-form label {
     margin: 0 10px;
 }
