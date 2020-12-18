@@ -188,12 +188,14 @@ header nav ul li a:hover {
     
 }
 
-.front-end-col ul li , .back-end-col ul li {
+
+.front-end-col ul , .back-end-col ul {
     list-style: none;
     font-style: italic;
     text-align: center;
     text-decoration: none;
-    padding-right: 18%;
+    padding: 0;
+    margin: 0;
 }
 
 /* end of styling skills section */
