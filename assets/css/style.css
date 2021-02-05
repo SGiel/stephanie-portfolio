@@ -1,364 +1,199 @@
 :root {
     --primary-color: rgb(0,0,0);
-    --secondary-color: rgb(82, 79, 79);
-    --tertiary-color: rgb( 199, 151, 61);
-}
-
-/* The fonts are used by browsers in order of appearance. If browser doesn't use
-    Helvetic it then uses Arial, etc... */
-body {
-    color: var(--tertiary-color);
-    font-family: Helvetica, Arial, sans-serif;
+    --secondary-color: rgba(247, 242, 242, 0.829);
+    --tertiary-color: rgb(98, 76, 112);
 }
 * {
-    box-sizing: inherit;
-}
+    box-sizing: border-box;
+  }
+
 body {
     color: var(--primary-color);
-    font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--secondary-color);
+    font-family: "Cabin", Helvetica, sans-serif;
     box-sizing: border-box;
-    font-size: 16px;
-    /* width: 100%; */
+    font-size: 18px;
+}
+/* start of navbar styling */
+#navbar {
+    background-image: linear-gradient(to right, rgb(198, 196, 199),var(--tertiary-color));
+    margin-bottom: 0;
+    font-size: 24px;
 }
 
-/* start of styling header */
-
-header {
-    background-image: url("../images/mountains-with-cactus-banner-exp.png");
-    background-size: cover; 
-    background-attachment: fixed;
-    background-position: 100%; 
-    padding: 0 35px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    /* for Safari and older versions of Chrome */
-    position: -webkit-sticky; 
-    /* always put standardized version of a property last! */
-    position: sticky;
-    top: 0;
-    z-index: 9999; /* keeps on top in stacking order */
-}
-
-header h1 {
-    font-weight: bold;
-    /* font-size: 36px; */
-    font-size: 3rem;
-    margin: 0 0 0 15px;
-}
-
-header h1 a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-header nav {
-    margin: 7px 0;
-}
-
-header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-
-header nav ul li a {
-    padding: 0 30px 10px 0;
-    font-size: 1.5rem;
-    /* color: rgb(0,0,0); */
-    color: var(--tertiary-color);
-    text-decoration: none;
-    opacity: 1;
-}
-
-header nav ul li a:hover {
-    font-weight: normal;
-    font-weight: bold;
-    color: var(--secondary-color);
-}
-
-/* start of styling hero section */
-.hero {
-    background-image: url("../images/mountains-with-cactus-banner-exp.png");
-    background-size: cover; 
-    background-attachment: fixed;
-    background-position: 100%;
+#navbarNav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 300px;
-    /* for text in bottom-right corner */
-    font-style: italic;
-    justify-content: flex-end;
-    align-content: flex-end;
-}
-
-.hero h2 {
-    padding: 50px;
-}
-/* end of styling hero section */
-
-.section-title {
-    padding-left: 50px;
-}
-
-.section-title h2 {
-    color: var(--secondary-color);
-    text-align: left;
-    font-size: 2rem;
-}
-
-.section-title h2 {
-    color: var(--secondary-color);
-    text-align: left;
-    font-size: 2rem;
-}
-
-/* start of about-me styling */
-.about-me-content { 
-    padding: 2.5%; 
-    width: 100%;
-}
-
-.about-me-info {
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 2.5%;
-}
-
-.about-me-text {
-    flex: 1 60%;
-    align-items: center;
-}
-
-.about-me-image {
-    flex: 2 40%;
-    text-align: center;
-}
-.about-me-image img {
-    max-height: 300px;
-    max-width: 200px;
-    border-radius: 50%;
-}
-
-.small-border {
-    width: 20%;
-    margin: 0 auto;
-    border-bottom: 3px solid var(--tertiary-color);
-}
-/* end of styling about-me section */
-
-/* start of styling skills section */
-.skills-section {
-    width: 100%;
-    background-color: rgba(82,79,79,0.25);
-    padding: 2.5%;
-    font-size: 1.2rem;
-    font-family: Courier-New, Arial, sans-serif;
-}
-
-.skills-wrapper {
-    display: flex;
-    width: 60%;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.front-end-col, .back-end-col {
-    width: 35%;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.front-end-col h3, .back-end-col h3 {
-    text-align: center;
-    font-style: italic;
     
 }
 
+.navbar-nav a {
+    color: var(--secondary-color);
+}
 
-.front-end-col ul , .back-end-col ul {
+.navbar-nav a:hover {
+    font-size: 2rem;
+}
+/* end of navbar styling */
+
+/* start of styling of lhs column with vertical name */
+#name-bar {
+    display: block;
+    position: relative;
+    text-align: center;
+    line-height: 80%;
+    font-family: "Indie Flower";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#name-bar::after {
+    content: ""; 
+    background-image: url("../images/annie-spratt-gSQbip5HHuc-unsplash.jpg");
+    background-size: cover; 
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+} 
+
+#name {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* bullet symbol between first and last name */
+#bullet {
+    font-size: 10px;
+}
+
+/* end of styling of lhs column with vertical name */
+
+/* headers for all pages */
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* padding added above container on each page */
+#about-me, #skills, #projects, #hello {
+    padding-top: 100px;
+}
+
+/* start of styling about me page */
+#about-me-image {
+    padding: 20px;
+}
+
+#about-me-text {
+    padding: 20px;
+    text-align: center;
+}
+
+#about-me-image img {
+    max-height: 350px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px black;
+}
+
+#about-me-image img:hover {
+    opacity: 0.85;
+}
+/* end of styling about me page */
+
+/* start of styling project page */
+#front-end, #back-end {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#front-end ul , #back-end ul {
     list-style: none;
-    font-style: italic;
     text-align: center;
     text-decoration: none;
     padding: 0;
     margin: 0;
 }
 
-/* end of styling skills section */
-
-/* start of work section */
-.work {
-    padding: 2.5% 2.5% 2.5% 10%;
-    width: 100%;
-    
-}
-/* 2 x 3 grid with first of 5 images taking up two rows and first column 
-    twice as wide as next 2 columns */
-.work-grid-wrapper {
-    width: 60%;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr;
-    border: none;
-    justify-content: center;
-    margin: 0 auto;
-    gap: 15px;
+.project-bot-img {
+    padding-top: 10px;
 }
 
-/* 5 different background images for each of 5 grid items */
-.work-image-1, .work-image-2, .work-image-3, .work-image-4, .work-image-5 {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    padding: 10px; 
+#project-image-1 img{
+    height: 300px;
+    object-fit: fill;
 }
 
-.work-image-1 {
-    background-image: url("../images/Run-buddy-screenshot.png");
+#project-image-2 img, #project-image-3 img, #project-image-4 img, #project-image-5 img {
+    height: 145px;
 }
 
-.work-image-1:hover, .work-image-2:hover, .work-image-3:hover, .work-image-4:hover, .work-image-5:hover {
-    border: black;
-    border-style: solid;
-    border-width: 2px;
+#project-image-1, #project-image-2, #project-image-3, #project-image-4, #project-image-5 {
+    position: relative;
 }
 
-.work-image-2 {
-    background-image: url("../images/sergey-shmidt-koy6FlCCy5s-unsplash.jpg");
-}
-
-.work-image-3 {
-    background-image: url("../images/mikail-mcverry-Aw45CDU2evI-unsplash.jpg");
-}
-
-.work-image-4 {
-    background-position: center bottom;
-    background-image: url("../images/henry-becerra-0ZVbngTr7X4-unsplash.jpg");
-}
-
-.work-image-5 {
-    background-position: center;
-    background-image: url("../images/Laura-lugaresi-E27W6TyGmZM-unsplash.jpg");
-}
-
-/* declares positioning in grid */
-.work-grid-1 {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 2;
-}
-
-.work-grid-2 {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.work-grid-3 {
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.work-grid-4 {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-}
-
-.work-grid-5 {
-    grid-column: 3 / span 1;
-    grid-row: 2 / span 1;
-}
-
-.work-grid-item {
-    display: block;
-    width: 100%;
-}
-
-/* text in grid item has box and background */
-.work-text-large {
-    border: 2px solid rgba(82,79,79,0.50);
-    background-color: rgba(82,79,79,0.50);
-    margin: 2.5% 0 0 2.5%;
+.project-text, .project-text-large {
+    position: absolute;
+    margin-top: 10px;
+    border: ridge 1px rgb(98, 76, 112);
+    background-color: rgb(98, 76, 112,.80);
     text-align: center;
-    padding-bottom: 2.5%;
-    height: 80px;
-    width: 130px;
+    bottom: 8px;
+    left: 16px;
+    color: var(--secondary-color);
 }
+/* end of styling project page */
 
-.work-text {
-    border: 2px solid rgba(82,79,79,0.50);
-    background-color: rgba(82,79,79,0.50);
-    margin: 60% 0 2.5% 0%;
-    text-align: center;
-    padding-bottom: 2.5%;
-    height: 80px;
-    width: 130px;
-    font-size: .9rem;
-}
-
-.work-text-large p, .work-text p {
-    margin-top: 0;
-    margin-bottom: 2.5%;
-}
-/* end of work section */
-
-/* start of styling say-hello section */
-.say-hello-form {
+/* start of styling say-hello page */
+.hello-form {
     display: block;
-    background-color: rgba(82,79,79,0.25);
+    /* background-color: rgba(82,79,79,0.25); */
     padding: 2.5%;
     width: 100%;
+    border: solid var(--tertiary-color) 3px;
+    box-shadow: 5px 10px;
 }
 
-.say-hello-form form {
-    width: 40%;
+.hello-form form {
+    width: 80%;
     margin: 0 auto;
 }
 
-.say-hello-fi {
+.hello-fi {
     border: 1px solid var(--primary-color);
     border-radius: 15px;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: var(--secondary-color);
+    color: grey;
     width: 100%;
     margin-bottom: 15px;
-    background-color: white;
+    background-color: var(--secondary-color);
 }
 
-.say-hello-fi:focus {
+.hello-fi:focus {
     background-color: rgb(255,255,255);
     outline: none;
     border: 3px solid var(--tertiary-color);
 }
 
-.say-hello-form label {
+.hello-form label {
     margin: 0 10px;
 }
 
-.say-hello-form button {
+.hello-form button {
     background-color: var(--tertiary-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     border: none;
     border-radius: 15px;
     font-size: 16px;
     padding: 10px 20px;
 }
 
-.say-hello-form button:hover {
+.hello-form button:hover {
     padding: 12px 24px;
     font-size: 16px;
 }
@@ -366,187 +201,30 @@ header nav ul li a:hover {
 
 /* start of styling footer */
 footer {
-    width: 100%;
+    border-top: solid var(--tertiary-color) 2px;
 }
-footer h3 {
-    background-color: var(--tertiary-color);
-    height: 40px;
-    text-align: right;
-    padding: 10px;
-}
-
-footer span {
-    color: tomato;
+.fa-envelope, .fa-facebook , .fa-instagram, .fa-linkedin {
+    color: black;
 }
 /* end of styling footer */
 
-@media screen and (max-width:1064px) {
-    header h1, header nav {
-        margin: 0 auto;
-    }
-    
-}
-/* End of stylings for media screen max-width 1064px */
-
-@media screen and (max-width:980px) {
-   
-    .about-me-text {
-        text-align: center;
-    }
-
-    .front-end-col, .back-end-col {
-        width: 50%;
-    }
-
-    .say-hello-form form {
-        width: 60%;
-    }
-
-}
-/* end of stylings for media screen max-width of 900px */ 
-
+/* start of styling for media screen max-width of 600px */
 @media screen and (max-width:600px) {
-   
-    header h1, header nav {
-        margin: 0 auto;
-    }
-
-    header {
-        justify-content: center;
-        padding: 0;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header nav ul li a {
-        font-size: 1.25rem;
-    }
-
-    .hero h2 {
-        font-size: 1.25rem;
-    }
-
-.skills-section {
-    font-size: 1rem;
-}
-
-.skills-wrapper {
-    width: 100%;
-}
-
-    .front-end-col h3, .back-end-col h3 {
-        font-size: 1.25rem;
-    }
-
-    .say-hello-form form {
-        width: 80%;
-    }
-
-}
-/* End of stylings for media screen max-width 600px */
     
-@media screen and (max-width:480px) {
+    #about-me-image img {
+        max-height: 200px;
+    }
     
-    header {
-        justify-content: center;
-        padding: 0;
-    }
-
-    header h1 {
-        font-size: 1.75rem;
-    }
-
-    header nav ul li a {
-        font-size: 1.25rem;
-    }
-
-    .hero h2 {
-        font-size: 1.25rem;
-    }
-
-    header nav ul { 
-        display: flex; 
-        flex-flow: column; 
-        justify-content: center;
+    #name-bar {
+        font-size: 30px;
     } 
-
-    header h1 {
-        width: 100%;
-        text-align: center;
-    }
-
-    header nav {
-        width: 100%;
-    }
-
-    .section-title h2 {
-        text-align: center;
-    }
-
-    .work-grid-wrapper {
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat (3, 1fr);
-    grid-template-rows: repeat (3, 1fr);
-    border: none;
-    justify-content: center;
-    margin: 0 auto;
-    gap: 5px;
-    }
-
-
-    /* declares positioning in grid */
-    .work-grid-1 {
-        grid-column: 1 / span 2;
-        grid-row: 1 / span 2;
-    }
-
-    .work-grid-2 {
-        grid-column: 3 / span 1;
-        grid-row: 1 / span 1;
-    }
-
-    .work-grid-3 {
-        grid-column: 3 / span 1;
-        grid-row: 2 / span 1;
-    }
-
-    .work-grid-4 {
-        grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
-    }
-
-    .work-grid-5 {
-        grid-column: 2 / span 1;
-        grid-row: 3 / span 1;
-    }
-
-    .work-grid-item {
-        display: block;
-        width: 100%;
-    }
-
-    /* text in grid item has box and background */
-    .work-text-large, .work-text {
-        border: none;
-        background-color: transparent;
-        margin: 2.5% 0 0 2.5%;
-        text-align: center;
-        padding-bottom: 2.5%;
-    }
-
-    .work-text-large p, .work-text p {
-        margin-top: 0;
-        margin-bottom: 2.5%;
-    }
-    /* end of work section */
-
-    .say-hello-form form {
-        width: 100%;
-    }
-
 }
-/* End of stylings for media screen maxwidth 480px */
-    
+/* end of styling for media screen max-width of 600px */
+
+/* start of stylings for media screen max-width of 992px (matched with Bootstrap lg */ 
+@media screen and (max-width: 992px) {
+    .project-top-img {
+        padding-top: 10px;
+    }
+}
+/* end of stylings for media screen max-width of 992px (matched with Bootstrap lg */ 

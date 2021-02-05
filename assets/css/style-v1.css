@@ -1,0 +1,552 @@
+:root {
+    --primary-color: rgb(0,0,0);
+    --secondary-color: rgb(82, 79, 79);
+    --tertiary-color: rgb( 199, 151, 61);
+}
+
+/* The fonts are used by browsers in order of appearance. If browser doesn't use
+    Helvetic it then uses Arial, etc... */
+body {
+    color: var(--tertiary-color);
+    font-family: Helvetica, Arial, sans-serif;
+}
+* {
+    box-sizing: inherit;
+}
+body {
+    color: var(--primary-color);
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    /* width: 100%; */
+}
+
+/* start of styling header */
+
+header {
+    background-image: url("../images/mountains-with-cactus-banner-exp.png");
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: 100%; 
+    padding: 0 35px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* for Safari and older versions of Chrome */
+    position: -webkit-sticky; 
+    /* always put standardized version of a property last! */
+    position: sticky;
+    top: 0;
+    z-index: 9999; /* keeps on top in stacking order */
+}
+
+header h1 {
+    font-weight: bold;
+    /* font-size: 36px; */
+    font-size: 3rem;
+    margin: 0 0 0 15px;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 0 30px 10px 0;
+    font-size: 1.5rem;
+    /* color: rgb(0,0,0); */
+    color: var(--tertiary-color);
+    text-decoration: none;
+    opacity: 1;
+}
+
+header nav ul li a:hover {
+    font-weight: normal;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* start of styling hero section */
+.hero {
+    background-image: url("../images/mountains-with-cactus-banner-exp.png");
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 300px;
+    /* for text in bottom-right corner */
+    font-style: italic;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+.hero h2 {
+    padding: 50px;
+}
+/* end of styling hero section */
+
+.section-title {
+    padding-left: 50px;
+}
+
+.section-title h2 {
+    color: var(--secondary-color);
+    text-align: left;
+    font-size: 2rem;
+}
+
+.section-title h2 {
+    color: var(--secondary-color);
+    text-align: left;
+    font-size: 2rem;
+}
+
+/* start of about-me styling */
+.about-me-content { 
+    padding: 2.5%; 
+    width: 100%;
+}
+
+.about-me-info {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2.5%;
+}
+
+.about-me-text {
+    flex: 1 60%;
+    align-items: center;
+}
+
+.about-me-image {
+    flex: 2 40%;
+    text-align: center;
+}
+.about-me-image img {
+    max-height: 300px;
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+.small-border {
+    width: 20%;
+    margin: 0 auto;
+    border-bottom: 3px solid var(--tertiary-color);
+}
+/* end of styling about-me section */
+
+/* start of styling skills section */
+.skills-section {
+    width: 100%;
+    background-color: rgba(82,79,79,0.25);
+    padding: 2.5%;
+    font-size: 1.2rem;
+    font-family: Courier-New, Arial, sans-serif;
+}
+
+.skills-wrapper {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.front-end-col, .back-end-col {
+    width: 35%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.front-end-col h3, .back-end-col h3 {
+    text-align: center;
+    font-style: italic;
+    
+}
+
+
+.front-end-col ul , .back-end-col ul {
+    list-style: none;
+    font-style: italic;
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* end of styling skills section */
+
+/* start of work section */
+.work {
+    padding: 2.5% 2.5% 2.5% 10%;
+    width: 100%;
+    
+}
+/* 2 x 3 grid with first of 5 images taking up two rows and first column 
+    twice as wide as next 2 columns */
+.work-grid-wrapper {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    border: none;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+/* 5 different background images for each of 5 grid items */
+.work-image-1, .work-image-2, .work-image-3, .work-image-4, .work-image-5 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    padding: 10px; 
+}
+
+.work-image-1 {
+    background-image: url("../images/Run-buddy-screenshot.png");
+}
+
+.work-image-1:hover, .work-image-2:hover, .work-image-3:hover, .work-image-4:hover, .work-image-5:hover {
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.work-image-2 {
+    background-image: url("../images/sergey-shmidt-koy6FlCCy5s-unsplash.jpg");
+}
+
+.work-image-3 {
+    background-image: url("../images/mikail-mcverry-Aw45CDU2evI-unsplash.jpg");
+}
+
+.work-image-4 {
+    background-position: center bottom;
+    background-image: url("../images/henry-becerra-0ZVbngTr7X4-unsplash.jpg");
+}
+
+.work-image-5 {
+    background-position: center;
+    background-image: url("../images/Laura-lugaresi-E27W6TyGmZM-unsplash.jpg");
+}
+
+/* declares positioning in grid */
+.work-grid-1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.work-grid-2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.work-grid-3 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.work-grid-4 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.work-grid-5 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.work-grid-item {
+    display: block;
+    width: 100%;
+}
+
+/* text in grid item has box and background */
+.work-text-large {
+    border: 2px solid rgba(82,79,79,0.50);
+    background-color: rgba(82,79,79,0.50);
+    margin: 2.5% 0 0 2.5%;
+    text-align: center;
+    padding-bottom: 2.5%;
+    height: 80px;
+    width: 130px;
+}
+
+.work-text {
+    border: 2px solid rgba(82,79,79,0.50);
+    background-color: rgba(82,79,79,0.50);
+    margin: 60% 0 2.5% 0%;
+    text-align: center;
+    padding-bottom: 2.5%;
+    height: 80px;
+    width: 130px;
+    font-size: .9rem;
+}
+
+.work-text-large p, .work-text p {
+    margin-top: 0;
+    margin-bottom: 2.5%;
+}
+/* end of work section */
+
+/* start of styling say-hello section */
+.say-hello-form {
+    display: block;
+    background-color: rgba(82,79,79,0.25);
+    padding: 2.5%;
+    width: 100%;
+}
+
+.say-hello-form form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.say-hello-fi {
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: var(--secondary-color);
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.say-hello-fi:focus {
+    background-color: rgb(255,255,255);
+    outline: none;
+    border: 3px solid var(--tertiary-color);
+}
+
+.say-hello-form label {
+    margin: 0 10px;
+}
+
+.say-hello-form button {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.say-hello-form button:hover {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+/* end of styling say-hello */
+
+/* start of styling footer */
+footer {
+    width: 100%;
+}
+footer h3 {
+    background-color: var(--tertiary-color);
+    height: 40px;
+    text-align: right;
+    padding: 10px;
+}
+
+footer span {
+    color: tomato;
+}
+/* end of styling footer */
+
+@media screen and (max-width:1064px) {
+    header h1, header nav {
+        margin: 0 auto;
+    }
+    
+}
+/* End of stylings for media screen max-width 1064px */
+
+@media screen and (max-width:980px) {
+   
+    .about-me-text {
+        text-align: center;
+    }
+
+    .front-end-col, .back-end-col {
+        width: 50%;
+    }
+
+    .say-hello-form form {
+        width: 60%;
+    }
+
+}
+/* end of stylings for media screen max-width of 900px */ 
+
+@media screen and (max-width:600px) {
+   
+    header h1, header nav {
+        margin: 0 auto;
+    }
+
+    header {
+        justify-content: center;
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul li a {
+        font-size: 1.25rem;
+    }
+
+    .hero h2 {
+        font-size: 1.25rem;
+    }
+
+.skills-section {
+    font-size: 1rem;
+}
+
+.skills-wrapper {
+    width: 100%;
+}
+
+    .front-end-col h3, .back-end-col h3 {
+        font-size: 1.25rem;
+    }
+
+    .say-hello-form form {
+        width: 80%;
+    }
+
+}
+/* End of stylings for media screen max-width 600px */
+    
+@media screen and (max-width:480px) {
+    
+    header {
+        justify-content: center;
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    header nav ul li a {
+        font-size: 1.25rem;
+    }
+
+    .hero h2 {
+        font-size: 1.25rem;
+    }
+
+    header nav ul { 
+        display: flex; 
+        flex-flow: column; 
+        justify-content: center;
+    } 
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    .section-title h2 {
+        text-align: center;
+    }
+
+    .work-grid-wrapper {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: repeat (3, 1fr);
+    border: none;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 5px;
+    }
+
+
+    /* declares positioning in grid */
+    .work-grid-1 {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+
+    .work-grid-2 {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .work-grid-3 {
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .work-grid-4 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .work-grid-5 {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .work-grid-item {
+        display: block;
+        width: 100%;
+    }
+
+    /* text in grid item has box and background */
+    .work-text-large, .work-text {
+        border: none;
+        background-color: transparent;
+        margin: 2.5% 0 0 2.5%;
+        text-align: center;
+        padding-bottom: 2.5%;
+    }
+
+    .work-text-large p, .work-text p {
+        margin-top: 0;
+        margin-bottom: 2.5%;
+    }
+    /* end of work section */
+
+    .say-hello-form form {
+        width: 100%;
+    }
+
+}
+/* End of stylings for media screen maxwidth 480px */
+    
