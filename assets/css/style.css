@@ -128,13 +128,16 @@ h1 {
     padding-top: 10px;
 }
 
-#project-image-1 img{
+#project-image-1 img {
     height: 300px;
     object-fit: fill;
+    opacity: 0.8;
 }
 
 #project-image-2 img, #project-image-3 img, #project-image-4 img, #project-image-5 img {
     height: 145px;
+    object-fit: fill;
+    opacity: 0.8;
 }
 
 #project-image-1, #project-image-2, #project-image-3, #project-image-4, #project-image-5 {
@@ -144,8 +147,8 @@ h1 {
 .project-text, .project-text-large {
     position: absolute;
     margin-top: 10px;
-    border: ridge 1px rgb(98, 76, 112);
-    background-color: rgb(98, 76, 112,.80);
+    border: ridge 2px darkgray;
+    background-color: rgb(98, 76, 112);
     text-align: center;
     bottom: 8px;
     left: 16px;
@@ -204,9 +207,19 @@ h1 {
 }
 /* end of styling say-hello */
 
-/* start of styling footer */
 footer {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* start of styling footer */
+#footer-col {
+    display: flex;
     border-top: solid var(--tertiary-color) 2px;
+    text-align: center;
 }
 .fa-envelope, .fa-facebook , .fa-instagram, .fa-linkedin {
     color: black;
@@ -223,13 +236,22 @@ footer {
     #name-bar {
         font-size: 30px;
     } 
+    
+    #project-image-1 img, #project-image-2 img, #project-image-3 img, #project-image-4 img, #project-image-5 img {
+        height: 200px;
+    }
 }
 /* end of styling for media screen max-width of 600px */
 
 /* start of stylings for media screen max-width of 992px (matched with Bootstrap lg */ 
-@media screen and (max-width: 992px) {
+@media screen and (max-width:992px) {
+
     .project-top-img {
         padding-top: 10px;
+    }
+
+    #project-image-1 img, #project-image-2 img, #project-image-3 img, #project-image-4 img, #project-image-5 img {
+        height: 200px;
     }
 }
 /* end of stylings for media screen max-width of 992px (matched with Bootstrap lg */ 
