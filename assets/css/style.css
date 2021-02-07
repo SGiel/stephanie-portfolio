@@ -79,8 +79,9 @@ h1 {
 }
 
 /* padding added above container on each page */
-#about-me, #skills, #projects, #hello {
-    padding-top: 100px;
+#about-me {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* start of styling about me page */
@@ -90,7 +91,7 @@ h1 {
 
 #about-me-text {
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 #about-me-image img {
@@ -103,6 +104,11 @@ h1 {
     opacity: 0.85;
 }
 /* end of styling about me page */
+
+/* padding added above container on skills, projects and hello page */
+#skills, #projects, #hello {
+    padding-top: 100px;
+}
 
 /* start of styling project page */
 #front-end, #back-end {
@@ -150,7 +156,6 @@ h1 {
 /* start of styling say-hello page */
 .hello-form {
     display: block;
-    /* background-color: rgba(82,79,79,0.25); */
     padding: 2.5%;
     width: 100%;
     border: solid var(--tertiary-color) 3px;
