@@ -132,16 +132,19 @@ h1 {
     height: 300px;
     object-fit: fill;
     opacity: 0.8;
+    width: 100%;
+}
+
+#project-image-1, #project-image-2, #project-image-3, #project-image-4, #project-image-5 {
+  position: relative;
+  width: 100%;
 }
 
 #project-image-2 img, #project-image-3 img, #project-image-4 img, #project-image-5 img {
     height: 145px;
     object-fit: fill;
     opacity: 0.8;
-}
-
-#project-image-1, #project-image-2, #project-image-3, #project-image-4, #project-image-5 {
-    position: relative;
+    width: 100%;
 }
 
 .project-text, .project-text-large {
